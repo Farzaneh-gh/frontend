@@ -38,7 +38,7 @@ function AllArticles() {
               <ArticleBox
                 key={article.id}
                 title={article.title}
-                cover={`http://localhost:4001/courses/covers/${article.cover}`}
+                cover={`https://sabzlearn-backend.onrender.com/courses/covers/${article.cover}`}
                 desc={article.desc}
                 shortName={article.shortName}
               />

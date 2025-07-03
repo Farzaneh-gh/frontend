@@ -108,7 +108,7 @@ export default function Courses() {
                           <img
                             className="main__box-img img-fluid cover"
                             alt="دوره"
-                            src={`http://localhost:4001/courses/covers/${course.course.cover}`}
+                            src={`https://sabzlearn-backend.onrender.com/courses/covers/${course.course.cover}`}
                           />
                         </span>
                       </div>

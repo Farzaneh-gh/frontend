@@ -15,7 +15,7 @@ export default function CourseBox({ colNumber = "col-4", course }) {
         {loading && <CircleSpinner />}
         <Link to={`/course-info/${course.shortName}`} className="col-4 ">
           <img
-            src={`http://localhost:4001/courses/covers/${course.cover}`}
+            src={`https://sabzlearn-backend.onrender.com/courses/covers/${course.cover}`}
             alt="Course img"
             className={`${styles.courseBox__img}`}
             style={{ display: loading ? "none" : "block" }}

@@ -91,7 +91,7 @@ function Session() {
                     <video
                       controls
                       className="w-100"
-                      src={`http://localhost:4001/courses/covers/${sessionData.video}`}
+                      src={`https://sabzlearn-backend.onrender.com/courses/covers/${sessionData.video}`}
                     >
                       Your browser does not support the video tag.
                     </video>
@@ -111,7 +111,7 @@ function Session() {
                 >
                   {sessionData && sessionData.video ? (
                     <a
-                      href={`http://localhost:4001/courses/covers/${sessionData.video}`}
+                      href={`https://sabzlearn-backend.onrender.com/courses/covers/${sessionData.video}`}
                       download
                       className="text-white text-decoration-none"
                     >
