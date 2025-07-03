@@ -1,0 +1,8 @@
+
+.courseBox__img {
+    width: 100%;
+    height: 50%; /* or whatever height works best visually */
+    object-fit:fill;
+    border-radius: 1rem 1rem 0 0;
+  
+  }

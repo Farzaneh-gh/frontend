@@ -1,0 +1,52 @@
+/* Start Default Styles */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  direction: rtl;
+}
+
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: all 400ms ease;
+}
+
+a:hover {
+  color: #1e83f0;
+}
+
+i {
+  user-select: none;
+}
+
+.swal-modal{
+  box-shadow: 0 5px 30px rgba(70, 72, 77, 0.08);
+}
+
+.swal-button-container{
+  margin: 1rem auto !important;
+  width: 60%;
+}
+
+.swal-button{
+  width:100%
+}
+
+.swal-footer{
+  text-align: center;
+}
+/* Finish Default Styles */

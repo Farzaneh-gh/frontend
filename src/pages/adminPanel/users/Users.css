@@ -1,0 +1,55 @@
+.user-container{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+.user-title{
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+ 
+}
+
+.table-header{
+   font-size: 1.4rem;
+    color: #555;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-body{
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.table-body tr th{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.table-body tr{
+    cursor: pointer;
+}
+.table-body tr:hover td,
+.table-body tr:hover th {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+
+}
+
+.register-button{
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #1e83f0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.register-button:hover{
+    background-color: #5a87b7;
+}

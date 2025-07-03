@@ -1,0 +1,104 @@
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem;
+  box-shadow: 0 0 13px 1px rgba(70, 72, 77, 0.08);
+}
+.topSection__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topSectionIcon{
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 3.8rem;
+  border-radius: 0.3rem;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  margin-left: 1rem;
+}
+
+.active {
+  color: var(--white-color);
+  background-color: #1e83f0;
+}
+
+.topbarSelection {
+  display: flex;
+  align-items: center;
+  height: 3.8rem;
+  border-radius: 0.3rem;
+  padding: 0.8rem 2rem;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  position: relative;
+  color: #7d7e7f;
+  transition: all 400ms ease;
+  gap: 1rem;
+  position: relative;
+}
+
+.coursesTopBar__selection {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--white-color);
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 0 0 0.3rem 0.3rem;
+  border-bottom: 0.3rem solid var(--primary-color);
+  z-index: 9999;
+  transition: all 400ms ease;
+}
+
+.topbarSelection:hover .coursesTopBar__selection {
+  opacity: 1;
+  visibility: visible;
+  top: 3.8rem;
+}
+
+.coursesTopBar__selectionItem {
+  color: #5f5f5f;
+  font-size: 1.4rem;
+  padding: 0.9rem 1.4rem;
+  transition: all 200ms ease;
+}
+
+.coursesTopBar__selectionItem:hover {
+  background-color: #f5f5f5;
+  color: var(--primary-color);
+}
+
+.topSection__left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem 1rem;
+  width: 30rem;
+  border-radius: 0.3rem;
+}
+
+.topSection__search {
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.topSection__searchIcon {
+  color: #7d7e7f;
+  font-size: 2rem;
+  cursor: pointer;
+}

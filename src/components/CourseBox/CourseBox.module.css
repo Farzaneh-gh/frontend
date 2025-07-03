@@ -1,0 +1,108 @@
+.courseBox {
+  background-color: var(--white-color);
+  box-shadow: 0 0 19px rgba(168, 172, 185, 0.3);
+  border-radius: 1rem;
+  margin: 2rem 0;
+  transition: all 400ms ease;
+
+}
+
+.courseBox__full{
+  display: flex;
+  flex-direction: row;
+}
+.courseBox:hover {
+  transform: translateY(-0.6rem);
+}
+
+.courseBox__img {
+  width: 100%;
+  height: 200px; /* or whatever height works best visually */
+  object-fit:fill;
+  border-radius: 1rem 1rem 0 0;
+
+}
+
+.courseBox__main {
+  padding: .3rem 1.2rem;
+}
+
+.courseBox__title {
+  display: block;
+  padding: 1rem 0;
+}
+
+.courseBox__ratingTeacher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courseBox__teacher {
+  display: flex;
+  align-items: center;
+}
+
+.courseBox__teacherIcon {
+  color: #6c757d;
+  font-size: 1.8rem;
+}
+
+.courseBox__teacherLink {
+  color: #6c757d;
+  font-size: 1.2rem;
+  margin-right: 0.4rem;
+}
+
+.courseBox__star {
+  margin: -0.2rem;
+}
+
+.courseBox__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.courseBox__usersIcon {
+  color: #6c757d;
+  font-size: 1.6rem;
+}
+
+.courseBox__usersText {
+  color: #6c757d;
+  font-size: 1.4rem;
+}
+
+.courseBox__price {
+  color: #9c9c9c;
+  font-size: 1.8rem;
+}
+
+.courseBox__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.3rem 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+.courseBox__footerLink {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.courseBox__footerIcon {
+  margin-right: 0.5rem;
+  font-size: 1.9rem;
+}
+
+.col4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}

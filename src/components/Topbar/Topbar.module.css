@@ -1,0 +1,66 @@
+.topBar {
+  color: var(--dark-color);
+  padding: 2rem 0;
+  background-color: #f0f2f7;
+}
+
+.topBarContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.topBarRight {
+  display: flex;
+}
+
+.topBarMenu {
+  display: flex;
+}
+
+
+.topBarLink {
+  color: var(--dark-color);
+  transition: all 400ms ease;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.topBarLeft {
+  display: flex;
+}
+
+.topBarEmail,
+.topBarPhone {
+  display: flex;
+  align-items: center;
+}
+
+.topBarEmailText,
+.topBarPhoneText {
+  padding: 0 0.8rem;
+}
+
+.topBarEmailIcon,
+.topBarPhoneIcon {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .topBarContent {
+  display: none;
+  visibility: hidden;
+  }
+
+  .topBar {
+    padding: 0;
+    background-color: #f0f2f7;
+  }
+}

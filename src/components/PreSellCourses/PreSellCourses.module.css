@@ -1,0 +1,8 @@
+.preSellCourses{
+    margin: 5rem 0;
+}
+ .swiper-rtl .swiper-button-prev{
+    color: #000 !important;
+    width: 2rem;
+    height: 2rem;
+}

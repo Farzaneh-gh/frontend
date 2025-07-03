@@ -1,0 +1,68 @@
+.coursesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.coursesHeaderRight {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.coursesHeaderText {
+  color: #9c9c9c;
+  font-size: 1.5rem;
+}
+
+.coursesHeaderLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.coursesHeaderLink:hover {
+  color: var(--white-color);
+}
+
+.coursesHeaderIcon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+.title {
+    font-size: 2.3rem;
+    color: #444446;
+    font-weight: bold;
+    line-height: 1.2;
+    position: relative;
+  }
+  
+  .title::before {
+    content: "";
+    position: absolute;
+    right: -1.5rem;
+    width: 0.4rem;
+    height: 4.4rem;
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    transform: rotate(8deg);
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 206, 86, 0.2);
+  }

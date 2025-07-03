@@ -1,0 +1,266 @@
+
+
+.mainHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.mainHeaderRight {
+  display: flex;
+}
+
+.mainHeaderMenu {
+  display: flex;
+}
+
+.mainHeaderItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.mainHeaderLink {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  color: #7f8187;
+}
+
+.mainHeaderLink:hover {
+  color: #7f8187;
+}
+
+.mainHeaderLinkIcon {
+  margin-right: 1rem;
+}
+
+.mainHeaderDropdown {
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  right: 0;
+  background-color: var(--white-color);
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  width: 24rem;
+  z-index: 1;
+  padding: 1rem 0;
+  border-bottom: 3px solid var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.mainHeaderItem:hover .mainHeaderDropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 3.5rem;
+  display: block;
+}
+
+.mainHeaderDropdownLink {
+  display: block;
+  padding: 0.6rem 2rem;
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  transition: all 400ms ease;
+}
+
+.mainHeaderDropdownLink:hover {
+  color: #1e83f0;
+}
+
+.mainHeaderLeft {
+  display: flex;
+  align-items: center;
+}
+
+.mainHeaderSearchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+}
+
+.mainHeaderSearchIcon {
+  color: var(--white-color);
+  font-size: 2.2rem;
+}
+
+.mainHeaderCartBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  background-color: #f0f2f7;
+}
+
+.mainHeaderCartBtn:hover {
+  color: #1e83f0;
+}
+
+.mainHeaderCartIcon {
+  color: var(--dark-color);
+  font-size: 2.2rem;
+  transition: all 400ms ease;
+}
+
+.mainHeaderProfile {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  transition: all 400ms ease;
+  color: var(--primary-color);
+  height: 4.3rem;
+}
+
+.mainHeaderProfile:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+
+
+@media (max-width: 992px) {
+  .mainHeaderContent {
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .mainHeaderRight {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+  
+  }
+
+  .mainHeaderMenu {
+    flex-direction: column;
+    width: 80%;
+    position: fixed !important;
+    right: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    background-color: #ffffff;
+
+    /* Hidden by default on mobile */
+  }
+
+  .mainHeaderItem {
+    padding: 0.5rem 0;
+  }
+
+  .mainHeaderDropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+    display: none;
+  }
+
+  .mainHeaderDropdown.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(245 245 245 );
+    border-radius: .5rem;
+
+    
+  }
+
+
+  .mainHeaderLeft {
+    justify-content: space-between;
+   
+  }
+
+  .mainHeaderSearchBtn,
+  .mainHeaderCartBtn,
+  .mainHeaderProfile {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  /* Show menu button */
+  .mobileMenuToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Show the menu when active */
+  .mainHeaderMenu.active {
+    display: flex;
+    width: 250px;
+ 
+  }
+}
+
+@media (max-width: 992px) {
+  .mainHeaderMenu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%; /* hidden by default */
+    height: 100vh;
+    width: 80%;
+
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 9999;
+  }
+  .mainHeaderDropdown{
+    z-index: 10000;
+    width: 100%;
+  }
+
+  .mainHeaderLink{
+    width: 100%;
+    display: block;
+    margin: 0.5rem 0;
+
+  }
+ 
+    
+  .mainHeaderMenu.active {
+    right: 0; /* slide into view */
+  }
+
+ 
+  .Navbar_mainHeaderItem {
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+
