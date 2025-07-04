@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary"; 
 import "./styles/reset.css";
 import "./styles/fonts.css";
 import "./styles/variables.css";
@@ -17,7 +17,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ErrorBoundary>
+        {/* ErrorBoundary is used to catch errors in the component tree */}
+        <App />
+      </ErrorBoundary>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -9,11 +9,17 @@ export default function Navbar() {
   const [allMenus, setAllMenus] = React.useState([]);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = React.useState(null);
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/menus`)
       .then((res) => res.json())
       .then((data) => {
-        setAllMenus(data);
+        // Ensure each menu has a submenus array
+        const normalizedMenus = data.map((menu) => ({
+          ...menu,
+          submenus: Array.isArray(menu.submenus) ? menu.submenus : [],
+        }));
+        setAllMenus(normalizedMenus);
       });
   }, []);
 
@@ -26,7 +32,7 @@ export default function Navbar() {
         ></i>
       </div>
       <div className={styles.mainHeaderRight}>
-        <img src="/images/logo/Logo.png " className="" alt="لوگوی سبزلرن" />
+        <img src="/images/logo/Logo.png" className="" alt="لوگوی سبزلرن" />
 
         <ul
           className={`${styles.mainHeaderMenu} ${
@@ -38,7 +44,7 @@ export default function Navbar() {
               صفحه اصلی
             </Link>
           </li>
-          {allMenus?.map((menu, index) => (
+          {allMenus.map((menu, index) => (
             <li
               className={styles.mainHeaderItem}
               key={index}
@@ -48,40 +54,35 @@ export default function Navbar() {
             >
               <Link to="#" className={styles.mainHeaderLink}>
                 <div className="d-flex align-items-center justify-content-between">
-                  <span> {menu.title}</span>
-                  {menu.submenus.length > 0 && (
-                    <>
-                      {" "}
-                      <i
-                        className={`fas fa-angle-down ${styles.mainHeaderLinkIcon}`}
-                      ></i>
-                    </>
+                  <span>{menu.title}</span>
+                  {Array.isArray(menu.submenus) && menu.submenus.length > 0 && (
+                    <i
+                      className={`fas fa-angle-down ${styles.mainHeaderLinkIcon}`}
+                    ></i>
                   )}
                 </div>
-                {menu.submenus.length > 0 && (
-                
-                    
-                    <ul
-                      className={`${styles.mainHeaderDropdown} ${
-                        openSubmenuIndex === index ? styles.open : ""
-                      }`}
-                    >
-                      {menu.submenus.map((submenu, subIndex) => (
-                        <li
-                          className={styles.mainHeaderDropdownItem}
-                          key={subIndex}
+
+                {Array.isArray(menu.submenus) && menu.submenus.length > 0 && (
+                  <ul
+                    className={`${styles.mainHeaderDropdown} ${
+                      openSubmenuIndex === index ? styles.open : ""
+                    }`}
+                  >
+                    {menu.submenus.map((submenu, subIndex) => (
+                      <li
+                        className={styles.mainHeaderDropdownItem}
+                        key={subIndex}
+                      >
+                        <Link
+                          to={submenu.href}
+                          className={styles.mainHeaderDropdownLink}
+                          onClick={(e) => e.stopPropagation()}
                         >
-                          <Link
-                            to={submenu.href}
-                            className={styles.mainHeaderDropdownLink}
-                            onClick={(e) => e.stopPropagation()} // prevent closing parent on submenu click
-                          >
-                            {submenu.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                 
+                          {submenu.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </Link>
             </li>
